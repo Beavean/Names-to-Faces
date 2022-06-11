@@ -13,6 +13,7 @@
 		08CB08AE2854D93400D8D112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CB08AC2854D93400D8D112 /* Main.storyboard */; };
 		08CB08B02854D93600D8D112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CB08AF2854D93600D8D112 /* Assets.xcassets */; };
 		08CB08B32854D93600D8D112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CB08B12854D93600D8D112 /* LaunchScreen.storyboard */; };
+		08CB08BB2854DD3B00D8D112 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB08BA2854DD3B00D8D112 /* PersonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		08CB08AF2854D93600D8D112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08CB08B22854D93600D8D112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08CB08B42854D93600D8D112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08CB08BA2854DD3B00D8D112 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				08CB08A82854D93400D8D112 /* SceneDelegate.swift */,
 				08CB08AA2854D93400D8D112 /* ViewController.swift */,
 				08CB08AC2854D93400D8D112 /* Main.storyboard */,
+				08CB08BA2854DD3B00D8D112 /* PersonCell.swift */,
 				08CB08AF2854D93600D8D112 /* Assets.xcassets */,
 				08CB08B12854D93600D8D112 /* LaunchScreen.storyboard */,
 				08CB08B42854D93600D8D112 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				08CB08AB2854D93400D8D112 /* ViewController.swift in Sources */,
 				08CB08A72854D93400D8D112 /* AppDelegate.swift in Sources */,
+				08CB08BB2854DD3B00D8D112 /* PersonCell.swift in Sources */,
 				08CB08A92854D93400D8D112 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
