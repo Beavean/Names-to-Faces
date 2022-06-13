@@ -43,6 +43,9 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     
     @objc func addNewPerson() {
         let picker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        }
         picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
@@ -99,16 +102,5 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         })
         
         present(mainAlert, animated: true)
-        
-//        let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
-//        ac.addTextField()
-//
-//        ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
-//            guard let newName = ac?.textFields?[0].text else { return }
-//            person.name = newName
-//            self?.collectionView.reloadData()
-//        })
-//        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//        present(ac, animated: true)
     }
 }
