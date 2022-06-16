@@ -15,12 +15,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
         
-        let defaults = UserDefaults.standard
-        if let savedPeople = defaults.object(forKey: "people") as? Data {
-            if let decodedPeople = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedPeople) as? [Person] {
-                people = decodedPeople
-            }
-        }
+        
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
         return people.count
@@ -68,7 +63,6 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         let person = Person(name: "Unknown", image: imageName)
         people.append(person)
-        save()
         collectionView.reloadData()
         
         dismiss(animated: true)
@@ -100,7 +94,6 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         mainAlert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
             self?.people.remove(at: indexPath.item)
-            self?.save()
             self?.collectionView.reloadData()
         })
         
@@ -109,12 +102,5 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         })
         
         present(mainAlert, animated: true)
-    }
-    
-    func save() {
-        if let savedDate = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
-            let defaults = UserDefaults.standard
-            defaults.set(savedDate, forKey: "pople")
-        }
     }
 }
